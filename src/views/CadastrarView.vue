@@ -29,7 +29,6 @@ export default {
   },
 
   mounted() {
-    // Carrega do localStorage quando a página abre
     const dados = localStorage.getItem('produtos')
     if (dados) {
       this.produtos = JSON.parse(dados)
@@ -48,7 +47,7 @@ export default {
         preco: this.preco
       })
 
-      // Salva no localStorage
+      
       localStorage.setItem('produtos', JSON.stringify(this.produtos))
 
       this.nome = ''
